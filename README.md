@@ -66,8 +66,11 @@ RNF-05: Arquitetura modular com APIs abertas para integração logística
 ⚙️ Como Executar o Projeto
 
 Acesse a pasta do projeto: cd "Projeto Lanche"
+
 Instale as dependências: npm install
+
 Inicie o servidor: node server.js
+
 Acesse a aplicação no navegador em: http://localhost:3000
 
 --------------------------------------------------------------------------------
