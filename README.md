@@ -77,3 +77,4 @@ Acesse a aplicação no navegador em: http://localhost:3000
 Desenvolvido por: Igor (RA: T870JH3)
 Instituição: UNIP - Ciência da Computação
 Professor Orientador: André de Lira Muniz
+@agdelira 
