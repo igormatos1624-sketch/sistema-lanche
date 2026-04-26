@@ -1,0 +1,29 @@
+body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; margin: 0; }
+header { background: #d35400; color: white; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
+.header-right { display: flex; align-items: center; gap: 20px; }
+
+.btn-logout { background: #c0392b; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; }
+.btn-excluir { background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; }
+.btn-adicionar { background: #27ae60; color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+
+/* Estilo para a nova descrição acima da data */
+.form-estoque { display: flex; gap: 15px; align-items: flex-end; }
+.input-group { display: flex; flex-direction: column; gap: 5px; }
+.input-group label { font-size: 13px; color: #d35400; font-weight: bold; }
+
+#auth-container { height: 100vh; display: flex; align-items: center; justify-content: center; background: #d35400; }
+.auth-box { background: white; padding: 40px; border-radius: 10px; width: 320px; text-align: center; }
+.auth-box input { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+
+.tabs-menu { background: #e67e22; display: flex; }
+.tab-btn { background: none; border: none; padding: 15px 25px; color: white; cursor: pointer; }
+.tab-btn.active { background: #ba4a00; font-weight: bold; }
+
+.tab-content { display: none; padding: 20px; }
+.tab-content.active { display: block; }
+section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+.form-venda { display: flex; gap: 10px; }
+input { padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th, td { border: 1px solid #eee; padding: 12px; text-align: left; }
+.online { color: #2ecc71; font-weight: bold; }

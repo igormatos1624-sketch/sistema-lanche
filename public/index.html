@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>LANCHE - Gestão Integrada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TELA DE LOGIN -->
+    <div id="auth-container">
+        <section class="auth-box">
+            <h1>Acesso ao Sistema LANCHE</h1>
+            <input type="text" id="auth-user" placeholder="Usuário">
+            <input type="password" id="auth-pass" placeholder="Senha">
+            <div class="auth-buttons">
+                <button onclick="fazerLogin()">Entrar</button>
+                <button class="btn-secundario" onclick="fazerCadastro()">Criar Conta</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- SISTEMA PRINCIPAL -->
+    <div id="app-container" style="display: none;">
+        <header>
+            <h1>LANCHE - Gestão Integrada</h1>
+            <div class="header-right">
+                <div id="status" class="online">ONLINE</div>
+                <button class="btn-logout" onclick="fazerLogout()">Sair (Logout)</button>
+            </div>
+        </header>
+
+        <nav class="tabs-menu">
+            <button class="tab-btn active" onclick="abrirAba(event, 'vendas-tab')">PDV</button>
+            <button class="tab-btn" onclick="abrirAba(event, 'estoque-tab')">Gestão de Estoque</button>
+            <button class="tab-btn" onclick="abrirAba(event, 'historico-tab')">Histórico de Transações</button>
+        </nav>
+        
+        <main>
+            <div id="vendas-tab" class="tab-content active">
+                <section>
+                    <h2>Ponto de Venda (PDV)</h2>
+                    <div class="form-venda">
+                        <input type="text" id="prod" placeholder="Produto">
+                        <input type="number" id="valor" placeholder="R$">
+                        <button onclick="vender()">Finalizar Venda</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ABA ESTOQUE COM A NOVA DESCRIÇÃO DA DATA -->
+            <div id="estoque-tab" class="tab-content">
+                <section>
+                    <h2>Inserir Item no Estoque</h2>
+                    <div class="form-estoque">
+                        <input type="text" id="est-nome" placeholder="Produto">
+                        <div class="input-group">
+                            <label for="est-validade">( inserir data de validade )</label>
+                            <input type="date" id="est-validade">
+                        </div>
+                        <button class="btn-adicionar" onclick="adicionarAoEstoque()">Adicionar</button>
+                    </div>
+                </section>
+                <section>
+                    <h2>Itens em Estoque</h2>
+                    <table>
+                        <thead><tr><th>Produto</th><th>Validade</th><th>Ações</th></tr></thead>
+                        <tbody id="tabela-estoque"></tbody>
+                    </table>
+                </section>
+            </div>
+
+            <div id="historico-tab" class="tab-content">
+                <section>
+                    <h2>Histórico de Vendas (Auditoria)</h2>
+                    <table>
+                        <thead><tr><th>Data/Hora</th><th>Item</th><th>Valor</th><th>Status</th><th>Ações</th></tr></thead>
+                        <tbody id="corpo-historico"></tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
